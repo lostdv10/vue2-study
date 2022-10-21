@@ -1,0 +1,26 @@
+<h2>localStorage</h2>
+<button onclick="saveDate()">点我保存数据</button><br/>
+<button onclick="readDate()">点我读数据</button><br/>
+<button onclick="deleteDate()">点我删除数据</button><br/>
+<button onclick="deleteAllDate()">点我清空数据</button><br/>
+
+<script>
+  let person = {name:"JOJO",age:20}
+
+  function saveDate(){
+    localStorage.setItem('msg','localStorage')
+    localStorage.setItem('person',JSON.stringify(person))
+  }
+  function readDate(){
+    console.log(localStorage.getItem('msg'))
+    const person = localStorage.getItem('person')
+    console.log(JSON.parse(person))
+  }
+  function deleteDate(){
+    localStorage.removeItem('msg')
+    localStorage.removeItem('person')
+  }
+  function deleteAllDate(){
+    localStorage.clear()
+  }
+</script>

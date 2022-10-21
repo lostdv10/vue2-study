@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-cloak指令</title>
+
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+
+  </head>
+  <body>
+<style>
+  [v-cloak] {
+    display:none;
+  }
+</style>
+
+<div id="root">
+  <h2 v-cloak>{{ name }}</h2>
+</div>
+
+// 够延迟5秒收到vue.js
+<script type="text/javascript" src="http://localhost:8080/resource/5s/vue.js"></script>
+
+<script type="text/javascript">
+  console.log(1)
+  Vue.config.productionTip = false
+  new Vue({
+    el:'#root',
+    data:{name:'cess'}
+  })
+</script>
+
+
+  </body>
+</html>
