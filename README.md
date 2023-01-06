@@ -24,5 +24,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-#笔记
+# 笔记
+
+# 本篇为vue2创建，vue3有许多新特性，建议使用vue3
 
